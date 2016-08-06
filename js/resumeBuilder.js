@@ -7,11 +7,11 @@ var bio = {
         "email": "hello@mathanka.in",
         "github": "mathanka",
         "twitter": "mathanka",
-        "location": "Coimbatore,Tamilnadu"
+        // "location": "Coimbatore,Tamilnadu"
     },
-    "welcomeMessage": "Welcome to my Portfolio Page",
-    "skills": ["HTML5","CSS3","Javascript","Wordpress","jQuery"],
-    "biopic": "images/cb.png",
+    "welcomeMessage": "Web UI/UX Designer and Front End Developer Based in Dubai,UAE.Take a look at some of my works, and if you like them, feel free to contact me.Let’s create something WOW!",
+    "skills": ["HTML5 & CSS3","Javascript","jQuery","Photoshop","Illustrator"],
+    "biopic": "images/mathan.jpg",
 };
 
 var education = {
@@ -93,7 +93,7 @@ bio.display = function() {
         var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
         //displaying
         $("#header").prepend(formattedName,formattedRole);
-        $("#header").append(formattedPic, formattedMessage);
+        $(".bio-entry").append(formattedPic, formattedMessage);
         //contact List//
         var formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation;
         for (var contact in bio.contacts){
@@ -101,13 +101,13 @@ bio.display = function() {
             formattedEmail  = HTMLemail.replace("%data%", bio.contacts.email);
             formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
             formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-            formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+            // formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
         }
         $("#topContacts, #footerContacts").append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
         // $("#footerContacts").append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
 
         if (bio.skills.length > 0){
-            $("#header").append(HTMLskillsStart);
+            $(".bio-entry").append(HTMLskillsStart);
                 // for (var i=0; i < bio.skills.length; i++){
                 //     var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
                 //     $("#skills").append(formattedSkills);
