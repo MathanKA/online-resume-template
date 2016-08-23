@@ -1,0 +1,3 @@
+Doubts
+1. links to social
+2. bootstrap class to experience

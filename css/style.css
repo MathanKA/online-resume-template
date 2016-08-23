@@ -76,7 +76,7 @@ h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #ff5d4c;
   line-height: 16px;
   float: right;
 
@@ -162,7 +162,7 @@ color: #3498db;
 }
 
 .intro {
-  background-color: #3498db;
+  background-color: #ff5d4c;
   height: 100vh;
 /*  background: linear-gradient(45deg, rgba(97, 0, 255, 0.49), rgba(151, 29, 252, 0.49) 22%, rgba(164, 65, 248, 0.49) 50%, rgba(90, 108, 239, 0.49) 72%, rgba(53, 130, 235, 0.49) 86%, rgba(30, 242, 241, 0.49));*/
   padding: 2.5% 5%;

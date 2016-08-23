@@ -1,4 +1,3 @@
-
 var bio = {
     "name": "Mathan K A",
     "role": "UI Developer",
@@ -125,6 +124,7 @@ bio.display = function() {
 //Work Function //
 work.display = function(){
     $("#workExperience").append(HTMLworkStart);
+
     // for (var job in work.jobs){
     work.jobs.forEach(function(job){
         var formattedEmp = HTMLworkEmployer.replace("%data%", job.employer);
