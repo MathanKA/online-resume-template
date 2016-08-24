@@ -18,33 +18,33 @@ var education = {
     {
         "name": "SVS College of Engineering",
         "location": "Coimbatore",
-        "degree": "B.E.",
-        "majors": ["Computer Science","Software developement"],
-        "dates": "2010 - 2014",
+        "degree": "Bachelor of Engineering",
+        "majors": ["Computer Science"],
+        "dates": "May 2010 - May 2014",
         "url": "http://www.svsce.edu.in/"
     },
     {
         "name": "Kikani Higher Sec. School",
         "location": "Coimbatore",
-        "degree": "12th",
-        "majors": ["Computer Science","Maths"],
+        "degree": "Senior Secondary",
+        "majors": ["Computer Science","Maths","Physics"],
         "dates": "2008 - 2010",
-        "url": "http://www.svsce.edu.in/"
+        "url": ""
     },
     {
         "name": "St.Thomas Higher Sec. School",
         "location": "Erode",
-        "degree": "10th",
-        "majors": ["Science","Maths"],
+        "degree": "High School",
+        "majors": ["Science","Maths","biology","arts"],
         "dates": "2008",
-        "url": "http://www.svsce.edu.in/"
+        "url": ""
     }],
 
     "onlineCourses": [
     {
         "title": "Front End developer",
         "school": "Udacity",
-        "date": "june,2016 - july 2016",
+        "date": "June,2016 - July 2016",
         "url": "https://profiles.udacity.com/?_ga=1.191526058.1657317119.1460480024"
     }]
 };
@@ -56,14 +56,16 @@ var work = {
         "title": "UI Developer",
         "location": "Coimbatore",
         "dates": "2014 - 2016",
-        "description": "To develop the required web pages for the above site, Monitoring and managing the website administration, Maintenance of database and web server, Html5 designs for emails and Leading the social media marketing team in the company."
+        "description": "To develop the required web pages for the above site, Monitoring and managing the website administration, Maintenance of database and web server, Html5 designs for emails and Leading the social media marketing team in the company.",
+        "link": "http://bluewebsolutions.in/"
     },
     {
         "employer": "Red Solutions",
         "title": "UI Developer",
         "location": "Chennai",
         "dates": "2012 - 2014",
-        "description": "To develop the required web pages for the above site, Monitoring and managing the website administration, Maintenance of database and web server, Html5 designs for emails and Leading the social media marketing team in the company."
+        "description": "To develop the required web pages for the above site, Monitoring and managing the website administration, Maintenance of database and web server, Html5 designs for emails and Leading the social media marketing team in the company.",
+        "link": "http://bluewebsolutions.in/"
     }]
 };
 
@@ -132,10 +134,13 @@ work.display = function(){
         var formattedDate = HTMLworkDates.replace("%data%", job.dates);
         var formattedDesc = HTMLworkDescription.replace("%data%", job.description);
         var formatworkLoc = HTMLworkLocation.replace("%data%", job.location);
+        var formatworkUrl = HTMLworkSiteUrl.replace("%data%", job.link);
         $(".work-entry").append(formattedEmp + formattedTitle);
         $(".work-entry").append(formattedDate);
         $(".work-entry").append(formatworkLoc);
         $(".work-entry").append(formattedDesc);
+        $(".work-entry").append(formatworkUrl);
+
     })
 };
 

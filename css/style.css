@@ -79,7 +79,14 @@ h5 {
   color: #ff5d4c;
   line-height: 16px;
   float: right;
+}
 
+.link-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #ff5d4c;
+  line-height: 16px;
+/*  float: left;*/
 }
 
 p {
