@@ -2,14 +2,20 @@ var bio = {
     "name": "Mathan K A",
     "role": "UI Developer",
     "contacts": {
-        "mobile": "8015571079",
+        "mobile": "+918015571079",
         "email": "hello@mathanka.in",
         "github": "mathanka",
         "twitter": "mathanka",
+        "mobileLink": "tel:+918015571079",
+        "emaillink": "mailto:hello@mathanka.in",
+        "githublink": "https://github.com/mathanka",
+        "twitterlink": "https://twitter.com/mathanka"
         // "location": "Coimbatore,Tamilnadu"
     },
     "welcomeMessage": "Web UI/UX Designer and Front End Developer Based in Dubai,UAE.Take a look at some of my works, and if you like them, feel free to contact me.Let’s create something WOW!",
-    "skills": ["HTML5 & CSS3","Javascript","jQuery","Photoshop","Illustrator"],
+    "languages": ["HTML5 & CSS3","Javascript"],
+    "frameworks": ["Bootstrap,", "jQuery", "AngularJS"],
+    "tools":["Photoshop","Illustrator","Gulp","Git"],
     "biopic": "images/mathan.jpg",
 };
 
@@ -35,7 +41,7 @@ var education = {
         "name": "St.Thomas Higher Sec. School",
         "location": "Erode",
         "degree": "High School",
-        "majors": ["Science","Maths","biology","arts"],
+        "majors": ["Science","Maths","Biology","Arts"],
         "dates": "2008",
         "url": ""
     }],
@@ -98,28 +104,31 @@ bio.display = function() {
         //contact List//
         var formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation;
         for (var contact in bio.contacts){
-            formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-            formattedEmail  = HTMLemail.replace("%data%", bio.contacts.email);
-            formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-            formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+            formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile).replace("%link%", bio.contacts.mobileLink);
+            formattedEmail  = HTMLemail.replace("%data%", bio.contacts.email).replace("%link", bio.contacts.emaillink);
+            formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github).replace("%link%", bio.contacts.githublink);
+            formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter).replace("%link%", bio.contacts.twitterlink);
             // formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
         }
         $("#topContacts, #footerContacts").append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
         // $("#footerContacts").append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
+        $(".bio-entry").append('<div id="skills-container"></div>');
+        $("#skills-container").append(HTMLskillsStart);
 
-        if (bio.skills.length > 0){
-            $(".bio-entry").append(HTMLskillsStart);
-                // for (var i=0; i < bio.skills.length; i++){
-                //     var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
-                //     $("#skills").append(formattedSkills);
-                // }
-            // for (var skill in bio.skills){
-            bio.skills.forEach(function(skill){
-                // if (bio.skills.hasOwnProperty(skill)) {
-                var formattedSkills = HTMLskills.replace("%data%", skill);
-                $("#skills").append(formattedSkills);
-            })
+        if (bio.languages.length > 0){
+            var Skills1 = SkillsHeader.replace("%data%", "Languages").replace("%id", "skills-languages");
+            $("#skills-container").append(Skills1);
+            for (var i=0; i < bio.languages.length; i++){
+                var formattedSkills1 = HTMLskills.replace("%data%", bio.languages[i]);
+                $("#skills-languages").append(formattedSkills);
+            }
         }
+// Using ForEach Another method
+            // bio.skills.forEach(function(skill){
+            //     // if (bio.skills.hasOwnProperty(skill)) {
+            //     var formattedSkills = HTMLskills.replace("%data%", skill);
+            //     $("#skills").append(formattedSkills);
+            // })
 };
 
 
@@ -146,20 +155,21 @@ work.display = function(){
 
 //Projects Function //
 projects.display = function() {
-    $("#projects").append(HTMLprojectStart);
+    // $("#projects").append(HTMLprojectStart);
+     $("#projects").append(HTMLColumn);
     // for (var project in projects.projects){
     projects.projects.forEach(function(project){
         var formprojectTitle = HTMLprojectTitle.replace("%data%", project.title);
         var formprojectDate = HTMLprojectDates.replace("%data%", project.dates);
         var formprojectDesc = HTMLprojectDescription.replace("%data%", project.description);
-        $(".project-entry").append(formprojectTitle);
-        $(".project-entry").append(formprojectDate);
-        $(".project-entry").append(formprojectDesc);
+        $(".one-column").append(formprojectTitle);
+        $(".one-column").append(formprojectDate);
+        $(".one-column").append(formprojectDesc);
         // for (var image in projects.projects[project].images){
-        for(var i=0; i < project.images.length; i++){
-             var formprojectImage = HTMLprojectImage.replace("%data%", project.images[i]);
-             $(".project-entry:last").append(formprojectImage);
-         }
+        // for(var i=0; i < project.images.length; i++){
+        //      var formprojectImage = HTMLprojectImage.replace("%data%", project.images[i]);
+        //      $(".project-entry:last").append(formprojectImage);
+        //  }
     })
 };
 

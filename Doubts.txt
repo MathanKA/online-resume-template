@@ -1,3 +1,4 @@
 Doubts
 1. links to social
 2. bootstrap class to experience
+3.for each title and href i want it in col-md-4. how to do that?
