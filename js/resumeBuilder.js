@@ -13,8 +13,8 @@ var bio = {
         // "location": "Coimbatore,Tamilnadu"
     },
     "welcomeMessage": "Web UI/UX Designer and Front End Developer Based in Dubai,UAE.Take a look at some of my works, and if you like them, feel free to contact me.Let’s create something WOW!",
-    "languages": ["HTML5 & CSS3","Javascript"],
-    "frameworks": ["Bootstrap,", "jQuery", "AngularJS"],
+    "languages": ["HTML5", "CSS3", "Javascript"],
+    "frameworks": ["Bootstrap", "jQuery", "AngularJS"],
     "tools":["Photoshop","Illustrator","Gulp","Git"],
     "biopic": "images/mathan.jpg",
 };
@@ -114,21 +114,39 @@ bio.display = function() {
         // $("#footerContacts").append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
         $(".bio-entry").append('<div id="skills-container"></div>');
         $("#skills-container").append(HTMLskillsStart);
-
-        if (bio.languages.length > 0){
-            var Skills1 = SkillsHeader.replace("%data%", "Languages").replace("%id", "skills-languages");
-            $("#skills-container").append(Skills1);
-            for (var i=0; i < bio.languages.length; i++){
-                var formattedSkills1 = HTMLskills.replace("%data%", bio.languages[i]);
-                $("#skills-languages").append(formattedSkills);
-            }
-        }
 // Using ForEach Another method
             // bio.skills.forEach(function(skill){
             //     // if (bio.skills.hasOwnProperty(skill)) {
             //     var formattedSkills = HTMLskills.replace("%data%", skill);
             //     $("#skills").append(formattedSkills);
             // })
+        if (bio.languages.length > 0){
+            var Skills1 = SkillsHeader.replace("%data%", "Languages").replace("%id%", "skills-languages");
+            $("#skills-container").append(Skills1);
+            for (var i=0; i < bio.languages.length; i++){
+                var formattedSkills1 = HTMLskills.replace("%data%", bio.languages[i]);
+                $("#skills-languages").append(formattedSkills1);
+            }
+        }
+
+        if (bio.frameworks.length > 0){
+            var Skills2 = SkillsHeader.replace("%data%", "Frameworks").replace("%id%", "skills-frameworks");
+            $("#skills-container").append(Skills2);
+            for (var i=0; i < bio.frameworks.length; i++){
+                var formattedSkills2 = HTMLskills.replace("%data%", bio.frameworks[i]);
+                $("#skills-frameworks").append(formattedSkills2);
+            }
+        }
+
+        if (bio.tools.length > 0){
+            var Skills3 = SkillsHeader.replace("%data%", "Tools").replace("%id%", "skills-tools");
+            $("#skills-container").append(Skills3);
+            for (var i=0; i < bio.tools.length; i++){
+                var formattedSkills3 = HTMLskills.replace("%data%", bio.tools[i]);
+                $("#skills-tools").append(formattedSkills3);
+            }
+        }
+
 };
 
 

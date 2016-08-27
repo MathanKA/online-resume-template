@@ -115,9 +115,17 @@ a {
 }
 
 .skills-header{
-  display: inline;
   color: black;
-  font-size: 12px;
+  font-size: 14px;
+  max-width: 200px;
+  display: inline;
+  float: left;
+  font-weight: bold;
+}
+
+.skills-ul {
+  max-width: 660px;
+  padding: 10px 0 10px 0;
 }
 
 #skills {
