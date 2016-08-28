@@ -121,11 +121,13 @@ a {
   display: inline;
   float: left;
   font-weight: bold;
+  /*padding: 0px;*/
 }
 
 .skills-ul {
   max-width: 660px;
   padding: 10px 0 10px 0;
+  /*padding: 0px;*/
 }
 
 #skills {
@@ -141,10 +143,11 @@ a {
   color: #f5ae23;
 }
 
-/*.white-text {
-  font-weight: bold;
+.white-text {
+  /*font-weight: bold;*/
   color: #fff;
-}*/
+  font-size: 18px;
+}
 
 .white-text a{
   color: #4d4e4e;
@@ -222,7 +225,7 @@ ul {
 
 .biopic {
   float: left;
-  /*padding: 10px;*/
+margin-top: 30px;
   width: 200px;
   height: 200px;
   border-radius: 50%;

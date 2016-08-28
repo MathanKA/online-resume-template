@@ -15,7 +15,7 @@ var bio = {
     "welcomeMessage": "Web UI/UX Designer and Front End Developer Based in Dubai,UAE.Take a look at some of my works, and if you like them, feel free to contact me.Let’s create something WOW!",
     "languages": ["HTML5", "CSS3", "Javascript"],
     "frameworks": ["Bootstrap", "jQuery", "AngularJS"],
-    "tools":["Photoshop","Illustrator","Gulp","Git"],
+    "tools":["Photoshop","Illustrator","Gulp"],
     "biopic": "images/mathan.jpg",
 };
 
@@ -81,13 +81,13 @@ var projects = {
         "title": "Website Design",
         "dates": "Jan 2014 - feb 2015",
         "description": "I am one of the member in the development team. I have also worked on static pages on this website.",
-        "images": ["images/projects/pro1.png", "images/projects/pro12.png"]
+        "images": ["images/projects/pro1.png"]
     },
     {
         "title": "Website Design",
         "dates": "Jan 2015 - feb 2015",
         "description": "I am one of the member in the development team. I have also worked on static pages on this website.",
-        "images": ["images/projects/pro2.png", "images/projects/pro22.png"]
+        "images": ["images/projects/pro2.png"]
     }]
 };
 
@@ -173,21 +173,20 @@ work.display = function(){
 
 //Projects Function //
 projects.display = function() {
-    // $("#projects").append(HTMLprojectStart);
-     $("#projects").append(HTMLColumn);
-    // for (var project in projects.projects){
+    $("#projects").append(HTMLprojectStart);
+    // for (var project in projects.projects){ Another Method
     projects.projects.forEach(function(project){
         var formprojectTitle = HTMLprojectTitle.replace("%data%", project.title);
         var formprojectDate = HTMLprojectDates.replace("%data%", project.dates);
         var formprojectDesc = HTMLprojectDescription.replace("%data%", project.description);
-        $(".one-column").append(formprojectTitle);
-        $(".one-column").append(formprojectDate);
-        $(".one-column").append(formprojectDesc);
-        // for (var image in projects.projects[project].images){
-        // for(var i=0; i < project.images.length; i++){
-        //      var formprojectImage = HTMLprojectImage.replace("%data%", project.images[i]);
-        //      $(".project-entry:last").append(formprojectImage);
-        //  }
+        $(".project-entry").append(formprojectTitle);
+        $(".project-entry").append(formprojectDate);
+        $(".project-entry").append(formprojectDesc)
+        // for (var image in projects.projects[project].images){ Another Method
+        for(var i=0; i < project.images.length; i++){
+             var formprojectImage = HTMLprojectImage.replace("%data%", project.images[i]);
+             $(".project-entry:last").append(formprojectImage);
+         }
     })
 };
 

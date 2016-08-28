@@ -25,7 +25,7 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 var HTMLworkSiteUrl = '<div class="link-text"><span><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></span>%data%</div>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLColumn = '<div class="col-md-4 one-column"></div>';
+var HTMLProjectSection = '<div class="project-row"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
