@@ -40,6 +40,7 @@ h2 {
   letter-spacing: -1px;
   text-indent: -8px;
   display: block;
+  color: #6ed3cf;
 }
 
 h3 {
@@ -63,7 +64,6 @@ h5 {
   padding:10px 5%;
 
 }
-
 
 .date-text {
   font-style: italic;
@@ -110,7 +110,7 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #6ed3cf;
   display: none;
 }
 
@@ -136,11 +136,12 @@ a {
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #ff5d4c;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #6ed3cf;
+  text-shadow: 2px 3px 0px rgba(0, 0, 0, .15);
 }
 
 .white-text {
@@ -150,8 +151,10 @@ a {
 }
 
 .white-text a{
-  color: #4d4e4e;
-  display: inline;
+    color: #6ed3cf;
+    display: inline;
+    text-shadow: 2px 3px 0px rgba(0, 0, 0, .15);
+    text-decoration: none;
 }
 
 .workExp {
@@ -162,7 +165,7 @@ a {
 }
 
 .workExp h2 {
-color: #3498db;
+color: #3c948b;
 }
 
 .workExp a {
@@ -172,6 +175,7 @@ color: #3498db;
   display: block;
   font-size: 18px;
 }
+
 .dark-gray {
   background-color: #4a4a4a;
 }
@@ -209,6 +213,7 @@ color: #3498db;
   text-indent: -8px;
   text-transform: uppercase;
   display: block;
+  text-shadow: 2px 3px 0px rgba(0, 0, 0, .15);
 }
 
 .intro h2 {
@@ -225,7 +230,7 @@ ul {
 
 .biopic {
   float: left;
-margin-top: 30px;
+  margin-top: 30px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -258,18 +263,38 @@ span {
 
 #projects {
 
-    background: #ddddcf;
+    background: #ff5d4c;
+    padding
 /*    background: -webkit-linear-gradient(to top right, #FF512F , #DD2476 );
     background: linear-gradient(to top right, #FF512F , #DD2476 );
     background: -moz-linear-gradient(to top right, #FF512F , #DD2476 );*/
-
 }
+
+#projects h2 {
+  text-shadow: 2px 3px 0px rgba(0, 0, 0, .15);
+  color: #fff;
+}
+
+#projects a {
+  font-size: 18px;
+  color: #fff;
+}
+
+#projects .date-text {
+  color: #000;
+}
+
+#projects p{
+  color: #fff;
+}
+
 .project-entry img{
   width: 500px;
   height: 300px;
-  box-shadow: 2px 2px 3px #ddd;
+  /*box-shadow: 2px 2px 3px #ddd;*/
   margin-right: 5px;
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
+  padding: 0px 0px 50px 10px;
 }
 
 

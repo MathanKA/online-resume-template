@@ -9,8 +9,8 @@ var bio = {
         "mobileLink": "tel:+918015571079",
         "emaillink": "mailto:hello@mathanka.in",
         "githublink": "https://github.com/mathanka",
-        "twitterlink": "https://twitter.com/mathanka"
-        // "location": "Coimbatore,Tamilnadu"
+        "twitterlink": "https://twitter.com/mathanka",
+        "location": "Coimbatore,Tamilnadu"
     },
     "welcomeMessage": "Web UI/UX Designer and Front End Developer Based in Dubai,UAE.Take a look at some of my works, and if you like them, feel free to contact me.Let’s create something WOW!",
     "languages": ["HTML5", "CSS3", "Javascript"],
@@ -174,18 +174,19 @@ work.display = function(){
 //Projects Function //
 projects.display = function() {
     $("#projects").append(HTMLprojectStart);
+    $(".project-entry").append(HTMLProjectSection);
     // for (var project in projects.projects){ Another Method
     projects.projects.forEach(function(project){
         var formprojectTitle = HTMLprojectTitle.replace("%data%", project.title);
         var formprojectDate = HTMLprojectDates.replace("%data%", project.dates);
         var formprojectDesc = HTMLprojectDescription.replace("%data%", project.description);
-        $(".project-entry").append(formprojectTitle);
-        $(".project-entry").append(formprojectDate);
-        $(".project-entry").append(formprojectDesc)
+        $(".project-row").append(formprojectTitle);
+        $(".project-row").append(formprojectDate);
+        $(".project-row").append(formprojectDesc)
         // for (var image in projects.projects[project].images){ Another Method
         for(var i=0; i < project.images.length; i++){
              var formprojectImage = HTMLprojectImage.replace("%data%", project.images[i]);
-             $(".project-entry:last").append(formprojectImage);
+             $(".project-row:last").append(formprojectImage);
          }
     })
 };
@@ -225,7 +226,7 @@ education.displayonlinecourse = function(){
 //Google Map code//
 
 $("#mapDiv").append(googleMap);
-$("#main").append(internationalizeButton);
+// $("#main").append(internationalizeButton);
 
 function inName(name) {
     console.log(name);
